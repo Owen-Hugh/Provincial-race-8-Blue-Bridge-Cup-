@@ -1,0 +1,35 @@
+[2022/3/20 20:27:54 GMT+0800] : launched
+[Warning] : Only support 'AC5,AC6' and 'GCC' compiler !
+Error: Only support 'AC5,AC6' and 'GCC' compiler !
+	at t.ProjectExplorer.<anonymous> (c:\Users\Admin\.vscode\extensions\cl.eide-2.16.8\dist\extension.js:14:195750)
+	at Generator.next (<anonymous>)
+	at c:\Users\Admin\.vscode\extensions\cl.eide-2.16.8\dist\extension.js:14:145825
+	at new Promise (<anonymous>)
+	at o (c:\Users\Admin\.vscode\extensions\cl.eide-2.16.8\dist\extension.js:14:145570)
+	at t.ProjectExplorer.showDisassembly (c:\Users\Admin\.vscode\extensions\cl.eide-2.16.8\dist\extension.js:14:195458)
+	at c:\Users\Admin\.vscode\extensions\cl.eide-2.16.8\dist\extension.js:7:25703
+	at r._executeContributedCommand (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:95:31080)
+	at r.$executeContributedCommand (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:95:31622)
+	at t._doInvokeHandler (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:99:13802)
+	at t._invokeHandler (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:99:13486)
+	at t._receiveRequest (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:99:12148)
+	at t._receiveOneMessage (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:99:10826)
+	at c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:99:8922
+	at u.fire (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:66:1712)
+	at r.fire (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:74:18942)
+	at c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:114:34341
+	at u.fire (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:66:1712)
+	at r.fire (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:74:18942)
+	at n._receiveMessage (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:74:23523)
+	at c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:74:21057
+	at u.fire (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:66:1712)
+	at w.acceptChunk (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:74:15770)
+	at c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:74:14900
+	at Socket.T (c:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\extensions\node\extensionHostProcess.js:114:13813)
+	at Socket.emit (events.js:315:20)
+	at addChunk (internal/streams/readable.js:309:12)
+	at readableAddChunk (internal/streams/readable.js:284:9)
+	at Socket.Readable.push (internal/streams/readable.js:223:10)
+	at Pipe.onStreamRead (internal/stream_base_commons.js:188:23)
+
+

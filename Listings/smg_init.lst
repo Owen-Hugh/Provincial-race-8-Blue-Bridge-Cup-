@@ -1,0 +1,25 @@
+C51 COMPILER V9.53.0.0   SMG_INIT                                                          03/20/2022 21:26:21 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE SMG_INIT
+OBJECT MODULE PLACED IN .\Objects\smg_init.obj
+COMPILER INVOKED BY: F:\keil5ARM\Keil5\C51\BIN\C51.EXE code\smg_init.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\code) DEBUG OBJ
+                    -ECTEXTEND PRINT(.\Listings\smg_init.lst) TABS(2) OBJECT(.\Objects\smg_init.obj)
+
+line level    source
+
+   1          #include "smg_init.h"
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

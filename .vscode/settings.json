@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "bsp_init.h": "c",
+        "ds1302.h": "c"
+    }
+}

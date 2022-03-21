@@ -1,0 +1,99 @@
+C51 COMPILER V9.53.0.0   BSP_INIT                                                          03/21/2022 09:45:17 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE BSP_INIT
+OBJECT MODULE PLACED IN .\Objects\bsp_init.obj
+COMPILER INVOKED BY: F:\keil5ARM\Keil5\C51\BIN\C51.EXE code\bsp_init.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\code) DEBUG OBJ
+                    -ECTEXTEND PRINT(.\Listings\bsp_init.lst) TABS(2) OBJECT(.\Objects\bsp_init.obj)
+
+line level    source
+
+   1          #include "bsp_init.h"
+   2          
+   3          //这个数组用于位选,只给一个引脚高电平
+   4          const char which[] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
+   5          //段选,根据数字编码
+   6          const char num[] = {0xc0, 0xf9, 0xa4, 0xb0, 0x99, 0x92, 0x82, 0xf8, 0x80, 0x90, 0xbf};
+   7          
+   8          sbit ch138_C = P2 ^ 7;
+   9          sbit ch138_B = P2 ^ 6;
+  10          sbit ch138_A = P2 ^ 5;
+  11          
+  12          /*
+  13          38译码器选择
+  14          0:no choose
+  15          4:LED
+  16          5:buzz
+  17          6:位选
+  18          7段选
+  19          */
+  20          void HC138(unsigned char n)
+  21          {
+  22   1        switch (n)
+  23   1        {
+  24   2        case /* constant-expression */ 0:
+  25   2          /* code */
+  26   2          ch138_C = ch138_B = ch138_A = 0;
+  27   2          break;
+  28   2        case 4:
+  29   2          ch138_C = 1;
+  30   2          ch138_B = ch138_A = 0;
+  31   2          break;
+  32   2        case 5:
+  33   2          ch138_C = ch138_A = 1;
+  34   2          ch138_B = 0;
+  35   2          break;
+  36   2        case 6:
+  37   2          ch138_C = ch138_B = 1;
+  38   2          ch138_A = 0;
+  39   2          break;
+  40   2        case 7:
+  41   2          ch138_C = ch138_B = ch138_A = 1;
+  42   2        default:
+  43   2          break;
+  44   2        }
+  45   1      }
+  46          
+  47          void delay(unsigned int i)
+  48          {
+  49   1        while (i--)
+  50   1          ;
+  51   1      }
+  52          
+  53          //关闭蜂鸣器andLED
+  54          void bsp_Init(void)
+C51 COMPILER V9.53.0.0   BSP_INIT                                                          03/21/2022 09:45:17 PAGE 2   
+
+  55          {
+  56   1        HC138(4);
+  57   1        P0 = 0xff;
+  58   1        HC138(5);
+  59   1        P0 = 0;
+  60   1        HC138(0);
+  61   1      }
+  62          
+  63          void dis_smg(unsigned char n, unsigned char m)
+  64          {
+  65   1        HC138(6);
+  66   1        P0 = which[n - 1];
+  67   1        HC138(7);
+  68   1        P0 = num[m];
+  69   1        delay(100);
+  70   1        P0 = 0xff;
+  71   1        delay(10);
+  72   1        HC138(0);
+  73   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    130    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

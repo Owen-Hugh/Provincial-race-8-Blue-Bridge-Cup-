@@ -1,0 +1,1 @@
+"code\bsp_init.c" OPTIMIZE (8,SPEED) BROWSE INCDIR(.\code) DEBUG OBJECTEXTEND PRINT(.\Listings\bsp_init.lst) TABS (2) OBJECT(.\Objects\bsp_init.obj)

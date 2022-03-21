@@ -1,0 +1,37 @@
+C51 COMPILER V9.53.0.0   TIME                                                              03/21/2022 09:43:17 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE TIME
+OBJECT MODULE PLACED IN .\Objects\time.obj
+COMPILER INVOKED BY: F:\keil5ARM\Keil5\C51\BIN\C51.EXE time.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\code) DEBUG OBJECTEXTEND
+                    - PRINT(.\Listings\time.lst) TABS(2) OBJECT(.\Objects\time.obj)
+
+line level    source
+
+   1          #include "time.h"
+   2          
+   3          void Timer0Init(void) //1毫秒@12.000MHz
+   4          {
+   5   1          AUXR &= 0x7F; //定时器时钟12T模式
+   6   1          TMOD &= 0xF0; //设置定时器模式
+   7   1          TL0 = 0x18;   //设置定时初值
+   8   1          TH0 = 0xFC;   //设置定时初值
+   9   1          TF0 = 0;      //清除TF0标志
+  10   1          TR0 = 1;      //定时器0开始计时
+  11   1          ET0 = 1;
+  12   1          EA = 1;
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     21    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
